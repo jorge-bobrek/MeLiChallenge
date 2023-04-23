@@ -8,14 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isActive: Bool = false
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        if self.isActive {
+            SearchProductView()
+                .environmentObject(SearchProductViewModel())
+        } else {
+            VStack {
+                Image("Logo")
+                    .resizable()
+                    .frame(width: 200, height: 200)
+            }
+            .frame(
+                maxWidth: .infinity,
+                maxHeight: .infinity,
+                alignment: .center
+            )
+            .background(Color("Background"))
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    withAnimation {
+                        self.isActive = true
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 

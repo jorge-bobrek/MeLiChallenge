@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class MeLi_ChallengeUITestsLaunchTests: XCTestCase {
+final class MeLiChallengeUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
