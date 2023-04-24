@@ -9,7 +9,11 @@ import Foundation
 
 final class SearchProductViewModel: ObservableObject {
 
-    private var service = SearchProductServiceImpl()
+    private var service: SearchProductService
+
+    init(service: SearchProductService) {
+        self.service = service
+    }
 
     @Published var products: [Product] = [Product]()
     @Published var paging: Paging = Paging(total: 0, primaryResults: 0, offset: 0, limit: 50)

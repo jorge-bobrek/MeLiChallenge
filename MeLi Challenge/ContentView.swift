@@ -13,7 +13,10 @@ struct ContentView: View {
     var body: some View {
         if self.isActive {
             SearchProductView()
-                .environmentObject(SearchProductViewModel())
+                .environmentObject(SearchProductViewModel(
+                                    service: SearchProductServiceImpl(
+                                        repository: SearchProductRepositoryImpl()))
+                )
         } else {
             VStack {
                 Image("Logo")

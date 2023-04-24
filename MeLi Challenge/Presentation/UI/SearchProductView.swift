@@ -147,6 +147,8 @@ struct SearchProductView: View {
 struct SearchProductView_Previews: PreviewProvider {
     static var previews: some View {
         SearchProductView()
-            .environmentObject(SearchProductViewModel())
+            .environmentObject(SearchProductViewModel(
+                service: SearchProductServiceImpl(
+                    repository: SearchProductRepositoryImpl())))
     }
 }

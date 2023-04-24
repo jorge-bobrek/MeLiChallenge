@@ -8,7 +8,11 @@
 import Foundation
 
 class SearchProductServiceImpl: SearchProductService {
-    private var repository = SearchProductRepositoryImpl()
+    private var repository: SearchProductRepository
+
+    init(repository: SearchProductRepository) {
+        self.repository = repository
+    }
 
     func searchProduct(query: String, completion: @escaping (ProductResponse) -> Void) {
         repository.get(query: query) { response in
