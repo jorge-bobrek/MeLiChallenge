@@ -23,11 +23,7 @@ final class SearchProductViewModel: ObservableObject {
         isLoading = true
         service.searchProduct(query: query) { [weak self] response in
             DispatchQueue.main.async {
-                if response.results.isEmpty {
-                    self?.products = []
-                } else {
-                    self?.products = ProductResponseMapper().map(response.results)
-                }
+                self?.products = ProductResponseMapper().map(response.results)
                 self?.paging = response.paging
                 self?.isLoading = false
             }

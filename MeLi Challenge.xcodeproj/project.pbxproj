@@ -101,6 +101,7 @@
 		F77C62AD29F5EFD900AF39BE /* MockProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProducts.swift; sourceTree = "<group>"; };
 		F77C62B029F5F1EA00AF39BE /* SearchProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductService.swift; sourceTree = "<group>"; };
 		F77C62B429F5FC2600AF39BE /* SearchProductViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductViewModelTests.swift; sourceTree = "<group>"; };
+		F7AB199229F75BFE00FEEA86 /* MeLi Challenge.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "MeLi Challenge.xctestplan"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +135,7 @@
 				F7275D8629F4673B00A7387E /* MeLi Challenge */,
 				F7275D9729F4673E00A7387E /* MeLi ChallengeTests */,
 				F7275DA129F4673E00A7387E /* MeLi ChallengeUITests */,
+				F7AB199229F75BFE00FEEA86 /* MeLi Challenge.xctestplan */,
 				F7275D8529F4673B00A7387E /* Products */,
 			);
 			sourceTree = "<group>";
